@@ -157,7 +157,7 @@ AND facility_sub_region_2 = 'Cook County';
 
 /*Join Database Table with OHF Internal Table by IL COVID-19 Region*/
 /*Count Number of Vaccine Facilities in each IL COVID-19 Region*/
-SELECT Vaccine_Facilities.Region, COUNT(DISTINCT facility_place_id) AS NumFacilities, COVID_Access.Masks, COVID_Access.Tests
+SELECT Vaccine_Facilities.Region, COUNT(DISTINCT Vaccine_Facilities.facility_place_id) AS NumFacilities, COVID_Access.Masks, COVID_Access.Tests
 FROM Vaccine_Facilities
 INNER JOIN
   COVID_Access ON
